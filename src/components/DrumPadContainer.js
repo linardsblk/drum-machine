@@ -4,7 +4,7 @@ import DrumPad from './DrumPad';
 export default function DrumPadContainer(props) {
     return <div id='drum-pad-container'>
         <div className='pure-g'>
-            <DrumPad action={props.play} text={'Q'}/>
+            <DrumPad text={'Q'}/>
             <DrumPad text={'W'}/>
             <DrumPad text={'E'}/>
         </div>

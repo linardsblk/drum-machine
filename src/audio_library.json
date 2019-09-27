@@ -1,0 +1,38 @@
+[
+    {
+        "key": "q",
+        "source": "/audio/808-Clap13.wav"
+    },
+    {
+        "key": "W",
+        "source": "/audio/808-Cowbell1.wav"
+    },
+    {
+        "key": "E",
+        "source": "/audio/808-HiHats07.wav"
+    },
+    {
+        "key": "A",
+        "source": "/audio/808-Kicks07.wav"
+    },
+    {
+        "key": "S",
+        "source": "/audio/808-Maracas2.wav"
+    },
+    {
+        "key": "D",
+        "source": "/audio/808-OpenHiHats10.wav"
+    },
+    {
+        "key": "Z",
+        "source": "/audio/808-Snare02.wav"
+    },
+    {
+        "key": "X",
+        "source": "/audio/808-Tom1.wav"
+    },
+    {
+        "key": "C",
+        "source": "/audio/Biiiig-808.wav"
+    }
+]
