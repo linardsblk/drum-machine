@@ -1,23 +1,18 @@
 import React from 'react';
-import {Howl} from 'howler';
-import audioLibrary from '../audio_library';
-
-
-//const bank = JSON.parse(audioLibrary);
-
-const style = {
+import style from '../stylesheets/main.css';
+/*const style = {
     fontSize: '100%',
     fontFamily: 'inherit',
-    border: '0',
     padding: '0',
     overflow: 'visible',
 
-
+    backgroundColor: 'gray',
     width: '100px',
     height: '100px',
     margin: '1px',
-    textAlign: 'center'
-}
+    textAlign: 'center',
+    border: '1px solid black'
+}*/
 
 export default class DrumPad extends React.Component {
     constructor(props) {
@@ -29,32 +24,41 @@ export default class DrumPad extends React.Component {
 
     componentDidMount() {
         document.addEventListener("keydown", this.handleKeydown, false);
-    }
+    };
     
       componentWillUnmount() {
-        document.removeEventListener("keyPress", this.handleKeydown, false);
-    }
+        document.removeEventListener("keydown", this.handleKeydown, false);
+    };
     
     handleKeydown = (event) =>  {
-        if(event) {
-            console.log(event.key);
-            this.playSound(audioLibrary.filter(el => el.key === event.key).source);
+        if(event && event.keyCode && 
+            event.keyCode === Number(this.props.padValues.keycode)) 
+        {
+            this.playSound();
+            
         };
-    }
+    };
 
-    playSound = (source) => {
-        var sound = new Howl({
-            src: [source],
-            volume: 1
-        });
-        sound.play();
-    }
+    playSound = () => {
+        const audio = document.getElementById(this.props.padValues.key);
+        audio.currentTime = 0;
+        var playPromise = audio.play();
+
+        if(playPromise !== undefined) {
+            playPromise.then(_ =>{
+                playPromise.pause();
+            })
+            .catch(error => {});
+        }
+        this.props.updateDisplayText(this.props.padValues.text);
+    };
 
     render() {
         return(
-                <button style={style} className="pure-u-1-3" id='drum-pad'>
-                {this.props.text}
-                </button>
+            <div className='drum-pad' onClick={this.playSound} id={this.props.padValues.source}>
+                {this.props.padValues.key}
+                <audio id={this.props.padValues.key} className='clip' src={this.props.padValues.source}></audio>
+            </div>
         )
     }
 }

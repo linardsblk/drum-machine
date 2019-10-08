@@ -1,38 +1,56 @@
 [
     {
-        "key": "q",
-        "source": "/audio/808-Clap13.wav"
+        "key": "Q",
+        "keycode": "81",
+        "source": "/audio/808-Clap13.wav",
+        "text": "Clap 13"
     },
     {
         "key": "W",
-        "source": "/audio/808-Cowbell1.wav"
+        "keycode": "87",
+        "source": "/audio/808-Cowbell1.wav",
+        "text": "Cowbell 1"
     },
     {
         "key": "E",
-        "source": "/audio/808-HiHats07.wav"
+        "keycode": "69",
+        "source": "/audio/808-HiHats07.wav",
+        "text": "Hi Hats7"
     },
     {
         "key": "A",
-        "source": "/audio/808-Kicks07.wav"
+        "keycode": "65",
+        "source": "/audio/808-Kicks07.wav",
+        "text": "Kicks 7"
     },
     {
         "key": "S",
-        "source": "/audio/808-Maracas2.wav"
+        "keycode": "83",
+        "source": "/audio/808-Maracas2.wav",
+        "text": "Maracas 2"
     },
     {
         "key": "D",
-        "source": "/audio/808-OpenHiHats10.wav"
+        "keycode": "68",
+        "source": "/audio/808-OpenHiHats10.wav",
+        "text": "Open Hi Hats 10"
     },
     {
         "key": "Z",
-        "source": "/audio/808-Snare02.wav"
+        "keycode": "90",
+        "source": "/audio/808-Snare02.wav",
+        "text": "Snare 2"
     },
     {
         "key": "X",
-        "source": "/audio/808-Tom1.wav"
+        "keycode": "88",
+        "source": "/audio/808-Tom1.wav",
+        "text": "Tom 1"
     },
     {
         "key": "C",
-        "source": "/audio/Biiiig-808.wav"
+        "keycode": "67",
+        "source": "/audio/Biiiig-808.wav",
+        "text": "Biiiig"
     }
 ]

@@ -1,0 +1,18 @@
+#drum-machine {
+  background-color: blue;
+  text-align: center;
+  position: relative; }
+
+#drum-pad-container {
+  width: 450px;
+  height: 450px;
+  background-color: orange;
+  display: inline-block;
+  padding: 20px; }
+
+.drum-pad {
+  background-color: red;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  float: left; }

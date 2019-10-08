@@ -1,0 +1,9 @@
+@import '../variables';
+
+.drum-pad {
+    background-color: red;
+    width: $padwidth;
+    height: $padheight;
+    position: relative;
+    float: left;
+}
