@@ -1,18 +1,40 @@
 #drum-machine {
-  background-color: blue;
+  background-color: #faf8ef;
   text-align: center;
-  position: relative; }
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 #drum-pad-container {
-  width: 450px;
-  height: 450px;
-  background-color: orange;
+  width: 480px;
+  height: 480px;
+  background-color: #bbada0;
   display: inline-block;
-  padding: 20px; }
+  padding: 5px;
+  margin: 10px;
+  border-radius: 5px; }
 
 .drum-pad {
-  background-color: red;
+  background-color: #eee4da59;
   width: 150px;
   height: 150px;
   position: relative;
-  float: left; }
+  float: left;
+  border-radius: 5px;
+  margin: 5px;
+  font-size: 50px;
+  line-height: 150px;
+  color: #776e65;
+  font-weight: bold; }
+
+#display {
+  width: 480px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #edc53f;
+  display: inline-block;
+  margin: 20px;
+  color: white;
+  font-size: 30px;
+  line-height: 50px; }

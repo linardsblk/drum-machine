@@ -1,5 +1,4 @@
 import React from 'react';
-import style from '../stylesheets/main.css';
 /*const style = {
     fontSize: '100%',
     fontFamily: 'inherit',
@@ -17,9 +16,12 @@ import style from '../stylesheets/main.css';
 export default class DrumPad extends React.Component {
     constructor(props) {
         super(props);
-        
+        this.state = {
+            padColor: "#eee4da59"
+        }
         this.handleKeydown = this.handleKeydown.bind(this);
         this.playSound     = this.playSound.bind(this);
+        this.activatePad   = this.activatePad.bind(this);
     }
 
     componentDidMount() {
@@ -51,11 +53,22 @@ export default class DrumPad extends React.Component {
             .catch(error => {});
         }
         this.props.updateDisplayText(this.props.padValues.text);
+        this.activatePad();
     };
+
+    activatePad = () => {
+        this.setState({
+            padColor: '#eee4da'
+        });
+
+        setTimeout(() => this.setState({
+            padColor: '#eee4da59'
+        }), 100);
+    }
 
     render() {
         return(
-            <div className='drum-pad' onClick={this.playSound} id={this.props.padValues.source}>
+            <div style={{backgroundColor:this.state.padColor}} className='drum-pad' onClick={this.playSound} id={this.props.padValues.source}>
                 {this.props.padValues.key}
                 <audio id={this.props.padValues.key} className='clip' src={this.props.padValues.source}></audio>
             </div>

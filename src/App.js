@@ -13,7 +13,7 @@ export default class App extends React.Component {
     super(props);
     this.state = {
       bank: audioLibrary,
-      displayText: "Placeholder"
+      displayText: ""
     }
     this.updateDisplayText = this.updateDisplayText.bind(this);
   }
@@ -22,6 +22,10 @@ export default class App extends React.Component {
     this.setState({
       displayText: text
     });
+
+    setTimeout(() => this.setState({
+      displayText: ""
+  }), 1000);
   }
 
   render() {

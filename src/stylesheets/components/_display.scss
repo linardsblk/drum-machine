@@ -1,0 +1,13 @@
+@import '../variables';
+
+#display {
+    width: $padwidth *3 + 30px;
+    height: $padheight /3;
+    border-radius: 5px;
+    background-color: $primary-color;
+    display: inline-block;
+    margin: 20px;
+    color: white;
+    font-size: $padheight / 5;
+    line-height: $padheight /3;
+}

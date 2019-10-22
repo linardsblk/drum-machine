@@ -1,6 +1,11 @@
+@import '../variables';
+
 #drum-machine {
-    background-color: blue;
+    background-color: $background-color;
     text-align: center;
-    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 

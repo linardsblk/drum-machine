@@ -1,9 +1,11 @@
 @import '../variables';
 
 #drum-pad-container {
-    width: $padwidth *3;
-    height: $padheight *3;
-    background-color: orange;
+    width: $padwidth *3 + 30px;
+    height: $padheight *3 + 30px;
+    background-color: $element-color;
     display: inline-block;
-    padding: 20px;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
 }

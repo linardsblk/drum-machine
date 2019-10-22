@@ -1,9 +1,15 @@
 @import '../variables';
 
 .drum-pad {
-    background-color: red;
+    background-color: $drumpad-color-disabled;
     width: $padwidth;
     height: $padheight;
     position: relative;
     float: left;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: $padheight/3;
+    line-height: $padheight;
+    color: $bold-font-color;
+    font-weight: bold;
 }
