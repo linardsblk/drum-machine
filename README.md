@@ -9,7 +9,7 @@ This app was created by create-react-app script.
 * Sass
 
 ## To-do
-* Create some controls (volume, on/off switch etc)
 * Create a way for user to map different sounds to keys
+* Cache state of settings on site reload
 * Add some text about author :)
 

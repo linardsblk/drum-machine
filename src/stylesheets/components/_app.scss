@@ -9,3 +9,14 @@
     align-items: center;
 }
 
+#made-by {
+    color: $bold-font-color;
+    font-family: monospace;
+
+    a:visited {
+        color: $bold-font-color;
+    }
+    a:hover {
+        color: $button-accent-color;
+    }
+}
