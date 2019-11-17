@@ -34,7 +34,8 @@ export default class DrumPad extends React.Component {
 	playSound = () => {
 		if (this.props.switchOn) {
 			const audio = document.getElementById(this.props.padValues.key);
-			audio.currentTime = 0;
+            audio.currentTime = 0;
+            audio.volume = this.props.volume / 100;
 			var playPromise = audio.play();
 
 			if (playPromise !== undefined) {
@@ -44,7 +45,7 @@ export default class DrumPad extends React.Component {
 					})
 					.catch(error => {});
 			}
-			this.props.updateDisplayText(this.props.padValues.text);
+			this.props.updateText(this.props.padValues.text);
 			this.activatePad();
 		}
 	};

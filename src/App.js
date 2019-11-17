@@ -11,13 +11,15 @@ export default class App extends React.Component {
 		this.state = {
 			bank: audioLibrary,
 			displayText: "",
-			switchOn: false
+			switchOn: false,
+			volume: 50
 		};
 		this.updateDisplayText = this.updateDisplayText.bind(this);
 		this.updateSwitch = this.updateSwitch.bind(this);
+		this.updateVolume = this.updateVolume.bind(this);
 	}
 
-	updateDisplayText = text => {
+	updateDisplayText = (text, timeoutMs = 1000) => {
 		this.setState({
 			displayText: text
 		});
@@ -27,13 +29,21 @@ export default class App extends React.Component {
 				this.setState({
 					displayText: ""
 				}),
-			1000
+			timeoutMs
 		);
 	};
 
 	updateSwitch = () => {
+    this.updateDisplayText(`Power: ${!this.state.switchOn ? 'On' : 'Off'}`)
 		this.setState({
 			switchOn: !this.state.switchOn
+		});
+	};
+
+	updateVolume = volumeLevel => {
+    this.updateDisplayText(`Volume: ${volumeLevel}`)
+		this.setState({
+			volume: volumeLevel
 		});
 	};
 
@@ -41,12 +51,18 @@ export default class App extends React.Component {
 		return (
 			<div id="drum-machine">
 				<Display displayText={this.state.displayText} />
-				<Controls updateSwitch={this.updateSwitch} />
+				<Controls
+					volumeLevel={this.state.volume}
+					updateVolume={this.updateVolume}
+          updateSwitch={this.updateSwitch}
+				/>
 				<DrumPadContainer
+          volume={this.state.volume}
 					switchOn={this.state.switchOn}
 					updateText={this.updateDisplayText}
 					bank={audioLibrary}
 				/>
+        <div id='made-by'>Made by <a href='https://github.com/linardsblk/drum-machine'>Linards</a></div>
 			</div>
 		);
 	}

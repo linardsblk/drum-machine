@@ -1,6 +1,7 @@
 @import '../variables';
 
 .drum-pad {
+    cursor: pointer;
     background-color: $drumpad-color-disabled;
     width: $padwidth;
     height: $padheight;
