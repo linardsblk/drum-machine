@@ -11,31 +11,10 @@ $height: $width / 2;
     width: $width;
     height: $height;
     border-radius: $height / 2;
-    input {
-      position: absolute;
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
   }
   .switch {
-    height: 100%;
-    display: grid;
-    grid-template-columns: 0fr 1fr 1fr;
+    height: $height;
+    width: $height;
+    border-radius: 50%;
     transition: .3s;
-    &::after {
-      content: '';
-      border-radius: 50%;
-      background: $bold-font-color;
-      grid-column: 2;
-      transition: background .3s;
-    }
-  }
-  input:checked {
-    + .switch {
-      grid-template-columns: 1fr 1fr 0fr; 
-      &::after {
-        background-color: $button-accent-color;
-      }
-    }
   }
